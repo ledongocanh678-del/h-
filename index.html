@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Trang bí mật</title>
+</head>
+<body>
+
+<h2>🔒 Nhập mật khẩu để xem nội dung</h2>
+
+<input type="password" id="pass" placeholder="Nhập mật khẩu">
+<button onclick="check()">Vào</button>
+
+<p id="result" style="color:red;"></p>
+
+<div id="content" style="display:none;">
+    <h3>🎉 Nội dung bên trong</h3>
+    <p> Ai lớp du bặc bặc :3 .</p>
+</div>
+
+<script>
+function check() {
+    var mk = document.getElementById("pass").value;
+    if (mk === "123456") {   // ← đổi mật khẩu ở đây
+        document.getElementById("content").style.display = "block";
+        document.getElementById("result").innerHTML = "";
+    } else {
+        document.getElementById("result").innerHTML = "Sai mật khẩu!";
+    }
+}
+</script>
+
+</body>
+</html>
